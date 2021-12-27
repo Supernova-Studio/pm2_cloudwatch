@@ -8,7 +8,7 @@ function CloudwatchDestination(
     cloudwatchRestartMetricName,
 ) {
 
-    this.getCloudwatch() = function () {
+    this.getCloudwatch = function () {
         var cw = new AWS.CloudWatch();
         cw.config.update({
             accessKeyId: awsAccessKey,
