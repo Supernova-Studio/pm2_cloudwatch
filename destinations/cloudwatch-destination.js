@@ -34,11 +34,11 @@ function CloudwatchDestination(
     }
 
     this.notifyRestart = function (processData) {
-        var metric = {
+        var metric = [{
             MetricName: cloudwatchRestartMetricName,
             Value: +processData.restart_time,
             Unit: "Count"
-        };
+        }];
         this.pushMetric(metric);
     };
 }
