@@ -3,6 +3,7 @@ const pm2 = require("pm2");
 
 var conf = pmx.initModule({}, function (err, conf) {
     var destinations = [];
+    console.log("CONF=", conf)
     process.on("uncaughtException", function (err) {
         console.log(err);
     });
