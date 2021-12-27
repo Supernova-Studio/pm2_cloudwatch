@@ -8,11 +8,8 @@ function CloudwatchDestination(
     cloudwatchRestartMetricName,
 ) {
 
-    console.log("CloudwatchDestination", {awsRegion, awsAccessKey, awsSecretKey, cloudwatchNamespace, cloudwatchRestartMetricName})
-
     this.getCloudwatch = function () {
-        var cw = new AWS.CloudWatch();
-        cw.config.update({
+        var cw = new AWS.CloudWatch({
             accessKeyId: awsAccessKey,
             secretAccessKey: awsSecretKey,
             region: awsRegion,
