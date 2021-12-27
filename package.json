@@ -1,19 +1,25 @@
 {
-  "name": "backend_pm2",
+  "name": "supernova_pm2_cloudwatch",
   "version": "1.0.0",
-  "description": "PM2 Sample Module",
+  "description": "pm2-cloudwatch metrics",
   "main": "index.js",
   "dependencies": {
+    "aws-sdk": "^2.1048.0",
     "pm2": "^5.1.2",
     "pmx": "beta"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/keymetrics/pmx.git"
+    "url": "https://github.com/Supernova-Studio/pm2_cloudwatch.git"
   },
   "config": {
-    "conf_var_1": true,
-    "conf_var_2": "myvalue"
+    "aws_region": "",
+    "aws_access_key": "",
+    "aws_secret_key": "",
+    "cloudwatch_namespace": "",
+    "cloudwatch_restart_metric": "api_restarts",
+    "cloudwatch_enabled": false,
+    "poll_interval": 10000
   },
   "apps": [
     {
@@ -22,6 +28,6 @@
       "script": "index.js"
     }
   ],
-  "author": "Keymetrics Inc.",
+  "author": "Supernova",
   "license": "MIT"
 }
