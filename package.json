@@ -1,5 +1,5 @@
 {
-  "name": "sample-module",
+  "name": "@supernova/backend_pm2",
   "version": "1.0.0",
   "description": "PM2 Sample Module",
   "main": "src/index.js",
