@@ -74,7 +74,7 @@ var conf = pmx.initModule({}, function (err, conf) {
             }
             setTimeout(function () {
                 pollPm2();
-            }, conf.pollInterval);
+            }, conf.poll_interval);
         });
     };
 
